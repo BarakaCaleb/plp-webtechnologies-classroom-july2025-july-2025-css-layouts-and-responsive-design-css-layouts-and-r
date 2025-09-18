@@ -1,0 +1,94 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* HEADER - Flexbox */
+.header {
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+}
+
+.header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* MAIN LAYOUT - Grid */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.content {
+  background: #f4f4f4;
+  padding: 1rem;
+}
+
+.sidebar {
+  background: #ddd;
+  padding: 1rem;
+}
+
+/* CARDS - Flexbox */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  flex: 1;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* FOOTER */
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* MEDIA QUERIES - RESPONSIVE DESIGN */
+
+/* Tablets (<= 900px) */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Mobile (<= 600px) */
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+  }
+}
